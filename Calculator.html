@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Calculator.css" />
+  </head>
+  <body>
+    <div class="outerdiv">
+      <div class="innerdiv">
+        <h1>Calculator</h1>
+        <div><input type="text" name="" id="TextBox1" readonly /></div>
+
+        <br />
+        <div id="buttons-combine">
+          <div class="nums">
+            <button
+              class="button"
+              onclick="currentVal=currentVal+'1';document.querySelector('#TextBox1').value=currentVal;"
+            >
+              1
+            </button>
+            <button
+              class="button"
+              onclick="currentVal=currentVal+'2';document.querySelector('#TextBox1').value=currentVal;"
+            >
+              2
+            </button>
+            <button
+              class="button"
+              onclick="currentVal=currentVal+'3';document.querySelector('#TextBox1').value=currentVal;"
+            >
+              3
+            </button>
+
+            <button
+              class="button"
+              onclick="currentVal=currentVal+'4';document.querySelector('#TextBox1').value=currentVal;"
+            >
+              4
+            </button>
+            <button
+              class="button"
+              onclick="currentVal=currentVal+'5';document.querySelector('#TextBox1').value=currentVal;"
+            >
+              5
+            </button>
+            <button
+              class="button"
+              onclick="currentVal=currentVal+'6';document.querySelector('#TextBox1').value=currentVal;"
+            >
+              6
+            </button>
+
+            <button
+              class="button"
+              onclick="currentVal=currentVal+'7';document.querySelector('#TextBox1').value=currentVal;"
+            >
+              7
+            </button>
+            <button
+              class="button"
+              onclick="currentVal=currentVal+'8';document.querySelector('#TextBox1').value=currentVal;"
+            >
+              8
+            </button>
+            <button
+              class="button"
+              onclick="currentVal=currentVal+'9';document.querySelector('#TextBox1').value=currentVal;"
+            >
+              9
+            </button>
+
+            <button
+              class="button"
+              onclick="currentVal=currentVal+'.';document.querySelector('#TextBox1').value=currentVal;"
+            >
+              .
+            </button>
+            <button
+              class="button"
+              onclick="currentVal=currentVal+'0';document.querySelector('#TextBox1').value=currentVal;"
+            >
+              0
+            </button>
+            <button
+              class="button"
+              onclick="currentVal=currentVal+'00';document.querySelector('#TextBox1').value=currentVal;"
+            >
+              00
+            </button>
+          </div>
+          <div class="oprns">
+            <button
+              class="button"
+              onclick="currentVal=currentVal+'+';document.querySelector('#TextBox1').value=currentVal;"
+            >
+              +
+            </button>
+            <button
+              class="button"
+              onclick="currentVal=currentVal+'-';document.querySelector('#TextBox1').value=currentVal;"
+            >
+              -
+            </button>
+            <button
+              class="button"
+              onclick="currentVal=currentVal+'*';document.querySelector('#TextBox1').value=currentVal;"
+            >
+              *
+            </button>
+            <button
+              class="button"
+              onclick="currentVal=currentVal+'/';document.querySelector('#TextBox1').value=currentVal;"
+            >
+              /
+            </button>
+          </div>
+        </div>
+        <br />
+        <button
+          type="reset"
+          id="reset"
+          onclick="currentVal='';document.querySelector('#TextBox1').value=currentVal;"
+        >
+          Clear
+        </button>
+        <button
+          type="submit"
+          id="submit"
+          onclick="currentVal=eval(currentVal);document.querySelector('#TextBox1').value=currentVal;"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+    <script>
+      let currentVal = "";
+      document.querySelector(".button").value = "";
+    </script>
+  </body>
+</html>
